@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --color-light-blue: #1f2a48;
+  --color-lighten-blue: #6584d8;
+  --color-dark-blue: #141c2f;
+  --color-highlight-blue: #0079fe;
+  --main-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--color-dark-blue);
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.container > * {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header form {
+  display: flex;
+  align-items: center;
+  flex-grow: 0.8;
+  background-color: var(--color-light-blue);
+  border-radius: var(--main-radius);
+}
+
+header form label[for="search"] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header form label[for="search"]:before {
+  content: "\f002";
+  color: var(--color-highlight-blue);
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+header form label input#search {
+  font-size: 16px;
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Space Mono", monospace;
+}
+
+header form label button[type="submit"] {
+  background: var(--color-highlight-blue);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  color: #fff;
+  border-top-right-radius: var(--main-radius);
+  border-bottom-right-radius: var(--main-radius);
+  cursor: pointer;
+}
+
+.detail {
+  min-height: 252px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  background-color: var(--color-light-blue);
+  border-radius: var(--main-radius);
+  gap: 30px;
+}
+
+.detail .left {
+  width: 25%;
+  padding: 20px;
+}
+
+.detail .left img.avatar {
+  border-radius: 250px;
+}
+
+.detail .right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.detail .right a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--color-highlight-blue);
+}
+
+.detail .right p {
+  width: 100%;
+}
+
+.detail .right .stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-dark-blue);
+  padding: 20px;
+  border-radius: var(--main-radius);
+}
+
+.detail .right .stats .item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-dark-blue);
+  padding: 10px;
+  border-radius: var(--main-radius);
+}
+
+.detail .right .stats .item span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.detail .right ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 5px;
+}
+
+.detail .right ul li {
+  width: 45%;
+  font-size: 12px;
+}
+
+.detail.empty {
+  min-height: 288px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--color-lighten-blue);
+  background: none;
+  color: var(--color-lighten-blue);
+}
+
+.detail.no-result {
+  min-height: 212px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--color-lighten-blue);
+  background: none;
+  color: var(--color-lighten-blue);
+}
+
+.history h4 {
+  margin-bottom: 10px;
+}
+.history ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+.history ul li {
+  width: 25%;
+}
+.history ul li a {
+  color: var(--color-highlight-blue);
+  text-decoration: none;
+  font-weight: 400;
+}
+.history ul li a:hover {
+  text-decoration: underline;
+}
